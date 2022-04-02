@@ -1,0 +1,25 @@
+﻿@using DataAccessLayer.Concrete
+@using EntityLayer.Concrete
+@model List<Category>
+
+
+<table class="table table-bordered">
+	<tr>
+		<th>ID</th>
+		<th>Category Adi</th>
+		<th>Veziyyeti</th>
+		<th>Detaylar</th>
+		<th>Sil</th>
+	</tr>
+
+	@foreach (var item in Model)
+{
+	<tr>
+		<td>@item.CategoryID</td>
+		<td>@item.CategoryName</td>
+		<td>@item.CategoryStatus</td>
+		<td><a href="#" class="btn btn-warning">Deyatlar</a></td>
+		<td><a href="#" class="btn btn-danger">Sil</a></td>
+	</tr>
+}
+</table>
